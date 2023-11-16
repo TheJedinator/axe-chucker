@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "axe-chucker"
+version = "0.0.1"
+description = "Axe throwing score keeping app"
+authors = ["Jed Palmater <TheJedinator@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "axe_chucker"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+textual = "^0.41.0"
+pyright = "^1.1.336"
+
+
+[tool.poetry.group.dev.dependencies]
+textual-dev = "^1.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

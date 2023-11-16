@@ -1,0 +1,45 @@
+AxeChucker {
+  layout: vertical;
+  min-width: 50;
+}
+
+ScoreBoard {
+  layout: horizontal;
+  min-width: 50;
+  height: 5;
+  background: $boost;
+  content-align: center middle;
+}
+
+ScoringButtonsContainer {
+  layout: horizontal;
+  min-width: 50;
+}
+
+CallButtonsContainer {
+  layout: horizontal;
+  min-width: 50;
+}
+
+Button {
+  width: 5;
+}
+
+.score_button {
+  width: 0.05vw;
+}
+
+#score_button6 {
+  background: rgba(255, 0, 0, 0.51);
+}
+#score_button6:hover {
+    background: rgba(255, 0, 0, 0.21);
+}
+
+#score_button8 {
+  background: #0073ff;
+}
+
+#score_button8:hover {
+    background: #034ea8
+}
