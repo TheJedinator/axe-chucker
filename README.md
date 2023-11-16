@@ -70,6 +70,8 @@ Phase 3 - Alternative UI
 
 
 ## UI
-Tkinter
+TUI with textual?
 
 ## To Play
+poetry install --sync
+python3 axe_chucker.py
