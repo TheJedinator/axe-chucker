@@ -5,10 +5,16 @@ AxeChucker {
 
 ScoreBoard {
   layout: horizontal;
-  min-width: 50;
+  min-width: 12;
+  width: 50;
   height: 5;
   background: $boost;
   content-align: center middle;
+}
+
+ScoreBoardElement {
+  layout: horizontal;
+  width: 25;
 }
 
 ScoringButtonsContainer {

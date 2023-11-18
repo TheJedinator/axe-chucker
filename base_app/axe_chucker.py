@@ -1,10 +1,12 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Footer, Header
 from textual.containers import ScrollableContainer
-from textual.widgets import Static, Button
+from textual.widgets import Static
 from throwing_entities.game import Game
 
 from throwing_entities.player import Player
+from ui_components.scoring_buttons import ScoringButtonsContainer
+from ui_components.call_buttons import CallButtonsContainer
 
 
 class ScoreBoardElement(Static):
@@ -22,35 +24,10 @@ class ScoreBoard(Static):
     def compose(self) -> ComposeResult:
         """Compose the score board"""
         yield ScoreBoardElement("Player 1", id="player1_name")
-
-        yield ScoreBoardElement(
-            f"Score: {self.game.player1_score if self.game else 0}", id="player1_score"
-        )
-
-
-class CallButtonsContainer(Static):
-    """A button container for kill shot calls, fouls, misses and drops"""
-
-    def compose(self) -> ComposeResult:
-        """Compose the button container"""
-        yield Button("Miss", id="miss_button")
-        yield Button("Drop", id="drop_button")
-        yield Button("Foul", id="foul_button")
-        yield Button("Kill Shot", id="kill_shot_call_button")
-
-
-class ScoringButtonsContainer(Static):
-    """A button container"""
-
-    def compose(self) -> ComposeResult:
-        """Compose the button container"""
-        yield Button("1", id="score_button1", classes="score_button")
-        yield Button("2", id="score_button2", classes="score_button")
-        yield Button("3", id="score_button3", classes="score_button")
-        yield Button("4", id="score_button4", classes="score_button")
-        yield Button("5", id="score_button5", classes="score_button")
-        yield Button("6", id="score_button6", classes="score_button")
-        yield Button("8", id="score_button8", classes="score_button")
+        # yield ScoreBoardElement("Player 2", id="player2_name")
+        # yield ScoreBoardElement(
+        #     f"Score: {self.game.player1_score if self.game else 0}", id="player1_score"
+        # )
 
 
 class AxeChucker(App):
